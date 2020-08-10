@@ -1,0 +1,23 @@
+CREATE TABLE Metadata (
+	Id int(11) NOT NULL AUTO_INCREMENT,
+	cord_uid  varchar(255),
+	sha text,
+	source_x text,
+	title text,
+	doi varchar(255),
+	pmcid varchar(255),
+	pubmed_id text,
+	license text,
+	abstract mediumtext,
+	publish_time text,
+	authors text,
+	journal text,
+	mag_id text,
+	who_covidence_id text,
+	arxiv_id text,
+	pdf_json_files text,
+	pmc_json_files text,
+	url text,
+	s2_id text,
+	CONSTRAINT PK_Metadata
+	PRIMARY KEY (Id)); 
