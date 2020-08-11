@@ -1,0 +1,16 @@
+internet/and/applications/data/DataAccess.java
+ internet.and.applications.data.DataAccess
+internet/and/applications/conf/Configuration.java
+ internet.and.applications.conf.Configuration
+internet/and/applications/conf/Listener.java
+ internet.and.applications.conf.Listener
+internet/and/applications/data/DataAccessException.java
+ internet.and.applications.data.DataAccessException
+internet/and/applications/conf/ConfigurationException.java
+ internet.and.applications.conf.ConfigurationException
+internet/and/applications/api/representation/JsonMapRepresentation.java
+ internet.and.applications.api.representation.JsonMapRepresentation
+internet/and/applications/api/resource/Scientists.java
+ internet.and.applications.api.resource.Scientists
+internet/and/applications/api/RestfulApp.java
+ internet.and.applications.api.RestfulApp

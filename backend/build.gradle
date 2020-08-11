@@ -57,7 +57,7 @@ dependencies {
     runtime "mysql:mysql-connector-java:8.0.18"              //the MySQL JDBC driver
 
     gretty "mysql:mysql-connector-java:8.0.18"               //make sure it is also available to the grety plugin
-
+    grettyRunnerJetty94 group: 'org.eclipse.jetty', name: 'jetty-runner', version: '9.4.19.v20190610'
     // Declare the dependency for your favourite test framework you want to use in your tests.
     // TestNG is also supported by the Gradle Test task. Just change the
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
@@ -67,12 +67,11 @@ dependencies {
 
 gretty {
     //scanInterval = 0 //disable hot deployment
-    httpEnabled = false
-    httpsEnabled = true
-    httpPort = 8765
-    httpsPort = 8765
+    httpEnabled = true
+    httpsEnabled = false
+    httpPort = 8080
+    httpsPort = 8080
     contextPath = ''
-    //servletContainer = 'tomcat8' //use the default (jetty)
-
     //integrationTestTask = 'test'
+    //servletContainer = 'jetty9.4'
 }

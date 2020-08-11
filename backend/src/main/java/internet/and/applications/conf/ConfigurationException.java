@@ -1,4 +1,4 @@
-package gr.ntua.ece.softeng19b.conf;
+package internet.and.applications.conf;
 
 public class ConfigurationException extends RuntimeException {
 
