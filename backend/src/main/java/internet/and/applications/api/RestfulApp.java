@@ -1,4 +1,4 @@
-package internet.and.applications;
+package internet.and.applications.api;
 
 import org.restlet.Application;
 import org.restlet.Restlet;
