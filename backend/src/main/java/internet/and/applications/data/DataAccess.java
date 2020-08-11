@@ -66,9 +66,9 @@ public class DataAccess {
 
     public Optional<List<Author>> searchquery(String disease){
       String sqlQuery="select authors from Metadata "+
-                      "where title = ?";
+                      "where title like ?";
       Object[] sqlParams = new Object[]{
-        disease
+        "%"+disease+"%"
       };
       try{
         List<Author> tmp = jdbcTemplate.query(sqlQuery, sqlParams,new AuthorMapper());
