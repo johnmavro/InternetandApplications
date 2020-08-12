@@ -65,8 +65,12 @@ public class DataAccess {
     }
 
     public Optional<List<Author>> searchquery(String disease){
-      String sqlQuery="select authors from Metadata "+
-                      "where title like ?";
+      String sqlQuery="select m.authors ,COUNT(*) as number from "+
+                      "(select SUBSTRING_INDEX(authors,';',1) as authors from Metadata"+
+                      " where title like ?) as m "+
+                      "group by m.authors "+
+                      "order by number desc "+
+                      "limit 11";
       Object[] sqlParams = new Object[]{
         "%"+disease+"%"
       };

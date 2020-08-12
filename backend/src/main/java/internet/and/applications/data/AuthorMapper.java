@@ -12,6 +12,7 @@ public class AuthorMapper implements RowMapper<Author> {
 
       Author author = new Author();
       author.setname(rs.getString("authors"));
+      author.setnumber(rs.getInt("number"));
       return author;
 
     }

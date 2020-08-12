@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Author {
   private String name;
+  private int number;
 
   public Author(){
 
@@ -15,5 +16,13 @@ public class Author {
 
   public void setname(String name){
     this.name =name;
+  }
+
+  public int getnumber(){
+    return number;
+  }
+
+  public void setnumber(int number){
+    this.number=number;
   }
 }
