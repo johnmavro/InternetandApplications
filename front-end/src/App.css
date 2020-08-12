@@ -1,0 +1,29 @@
+.containerB{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 100px;
+}
+
+.containerA{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.submit{
+  margin-left:40px;
+  width:200px;
+  height:50px;
+  background-color: green;
+  color:#ffffff;
+  border-radius: 50%;
+}
+
+button:hover{
+  background-color:yellow;
+  cursor:pointer;
+}

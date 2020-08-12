@@ -32,7 +32,7 @@ public class Scientists extends ServerResource {
         if( disease==null ) throw new ResourceException(400,"Bad request");
         Optional<List<Author>> opt = dataAccess.searchquery(disease);
         if(opt.isPresent()){
-          return new JsonMapRepresentation(Map.of("Author List",opt.get()));
+          return new JsonMapRepresentation(Map.of("AuthorList",opt.get()));
         }else{
           throw new ResourceException(400,"Bad request");
         }

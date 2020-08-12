@@ -78,7 +78,7 @@ public class DataAccess {
         List<Author> tmp = jdbcTemplate.query(sqlQuery, sqlParams,new AuthorMapper());
         return Optional.of(tmp);
       }catch(NoSuchElementException e){
-        System.out.println("FEK");
+        System.out.println("wrong");
         return Optional.empty();
       }
     }
