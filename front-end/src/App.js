@@ -1,6 +1,12 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MaterialTable from 'material-table';
+
+
+const columns = [{ title: 'Author Name', field: 'name' },
+  { title: 'Papers Published', field: 'number' },
+]
 
 function App() {
   const [disease, setDisease] = useState()
@@ -46,11 +52,14 @@ function App() {
       <input type='text' value={disease} onChange={(e)=>setDisease(e.target.value)}placeholder="Disease"/>
       <button className='submit' type='submit' onClick={handleSubmit}>Submit</button>
       </div>
-      {data.AuthorList.length>1?<div className='containerB'>
-        <h2>Authors</h2>
-        <h2 style={{marginLeft:'300px'}}>Numbers</h2>
-        </div>:null}
-      {data?result:null}
+      {data.AuthorList.length > 1?<MaterialTable
+        title="Disease Table"
+        columns={columns}
+        style={{width:'700px', marginTop:'50px'}}
+        data={data.AuthorList}
+
+      />
+      :null}
     </div>
   );
 }
